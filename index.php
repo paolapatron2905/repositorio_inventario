@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Cambio actualizado</h1>
+    <h1>Hola Mundo</h1>
+    <h2>Otro, otro cambio</h2>
 </body>
 </html>
