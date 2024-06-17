@@ -1,4 +1,4 @@
-# project_sgi
+# repositorio_inventario
 
 A new Flutter project.
 

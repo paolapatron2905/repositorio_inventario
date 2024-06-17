@@ -1,33 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_sgi/screens/prueba_inventario.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:repositorio_inventario/screen/login.dart';
 
-Future<void> main() async {
-  await Supabase.initialize(
-    url: 'https://zdshwmpzzpcdbfhmrbgh.supabase.co',
-    anonKey:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpkc2h3bXB6enBjZGJmaG1yYmdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTgzNzkwNDEsImV4cCI6MjAzMzk1NTA0MX0.raI9WJZeb98R2Px3mGnzTugBUQOt9srnAq97oPMVY5c',
-  );
-
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Prueba',
-      //home: Plantilla(),
+      debugShowCheckedModeBanner: false,
+      title: 'Sistema de Gestion de Inventario (SGI)',
       initialRoute: '/',
       getPages: [
-        //GetPage(name: '/Prueba', page: () => Prueba()),
-        GetPage(name: '/', page: () => Prueba()),
+        GetPage(name: '/', page: () => Login()),
+        /* GetPage(name: '/dash', page: () => ), */
       ],
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true),
-    ); //borrar etiqueta debug
+      theme: ThemeData(
+        useMaterial3: false,
+      ),
+    );
   }
 }
